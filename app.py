@@ -11,10 +11,13 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 db = SQLAlchemy(app)
 
-class User(db.model):
-    id = db.column(db.Integer, primary_key=True)
-    username = db.column(db.String(80),unique=True,nullible=False)
-    password_hash = db.Column(db.String())
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80),unique=True,nullable=False)
+    password_hash = db.Column(db.String(255))
+
+with app.app_context():
+    db.create_all()
 
 @app.route("/",methods = ["POST","GET"])
 def index():
