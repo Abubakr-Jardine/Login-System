@@ -26,6 +26,6 @@ def index():
             return redirect(url_for("login_page"))
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods = ["POST","GET"])
 def login_page():
-    return "This is the login page"
+    return render_template("login.html")
