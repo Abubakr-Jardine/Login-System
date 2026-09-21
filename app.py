@@ -1,6 +1,7 @@
 from flask import Flask, request,url_for, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
+from werkzeug.security import generate_password_hash
 import os
 
 load_dotenv()
@@ -28,4 +29,13 @@ def index():
 
 @app.route("/login", methods = ["POST","GET"])
 def login_page():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        hashed_password = generate_password_hash(password)
+        new_user = User(username=username, password_hash= hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+    
     return render_template("login.html")
