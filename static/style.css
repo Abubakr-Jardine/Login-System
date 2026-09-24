@@ -52,7 +52,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-    background-color: rgb(76, 175, 80);
+    background-color: rgb(218, 204, 7);
     color: white;
     padding: 16px 24px;
     border: none;
@@ -63,7 +63,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: rgb(69, 160, 73);
+    background-color: rgb(199, 186, 7);
 }
 
 .flashes {
