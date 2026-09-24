@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Scan this with your authenticator app</h2>
+<img src="data:image/png;base64,{{ qr_b64 }}">
+<form method="POST" action="/confirm-2fa">
+    <label>Enter the 6-digit code to confirm:</label>
+    <input type="text" name="code" required>
+    <button type="submit">Confirm</button>
+</form>
+{% endblock %}

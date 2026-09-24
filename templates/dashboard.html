@@ -1,4 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Dashboard</h1>
+<h2>Welcome, {{ user.username }}!</h2>
+
+{% if user.otp_enabled %}
+    <p>Two-factor authentication is <strong>enabled</strong> on your account.</p>
+{% else %}
+    <p>Two-factor authentication is not enabled.</p>
+    <a href="/enable-2fa">Enable 2FA</a>
+{% endif %}
+
+<a href="/logout">Logout</a>
 {% endblock %}

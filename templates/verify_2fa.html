@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Two-Factor Authentication</h2>
+<p>Enter the 6-digit code from your authenticator app.</p>
+
+<form method="POST" action="/verify-2fa">
+    <div>
+        <label for="code">Code:</label>
+        <input type="text" name="code" id="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required autofocus>
+    </div>
+    <div>
+        <input type="submit" value="Verify">
+    </div>
+</form>
+{% endblock %}
