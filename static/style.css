@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3 {
+    font-size: 2em;
+}
+
+p, label {
+    font-size: 1.2em;
+}
+
+a {
+    color: #4CAF50;
+    font-size: 1.2em;
+}
+
+form {
+    padding: 20px;
+    width: 33%;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+label {
+    color: #ffffff;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    font-size: 1.2em;
+    width: 80%;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+.flashes {
+    list-style: none;
+    padding: 10px;
+    background-color: #332b00;
+    color: #ffeeba;
+    border: 1px solid #665500;
+    border-radius: 5px;
+    width: 33%;
+}

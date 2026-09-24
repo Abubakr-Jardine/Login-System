@@ -104,7 +104,7 @@ def enable_2fa():
         db.session.commit()
 
     uri = pyotp.totp.TOTP(user.otp_secret).provisioning_uri(
-        name=user.username, issuer_name="YourAppName"
+        name=user.username, issuer_name="AJ Login System"
     )
  
     img = qrcode.make(uri)
