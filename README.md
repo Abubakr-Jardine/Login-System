@@ -44,7 +44,7 @@ secure-login-app/
 
 ```bash
 git clone <git@github.com:Abubakr-Jardine/Login-System.git>
-cd secure-login-app
+cd Login-System
 python3 -m venv venv
 source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install flask flask-sqlalchemy werkzeug flask-limiter pyotp qrcode[pil]
