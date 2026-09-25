@@ -43,7 +43,7 @@ secure-login-app/
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone <git@github.com:Abubakr-Jardine/Login-System.git>
 cd secure-login-app
 python3 -m venv venv
 source venv/bin/activate    # Windows: venv\Scripts\activate
